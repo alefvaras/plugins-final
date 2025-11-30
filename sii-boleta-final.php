@@ -33,27 +33,27 @@ set_time_limit(0);
 
 $CONFIG = [
     'ambiente' => 'cert', // 'cert' o 'prod'
-    
+
     // Certificado
-    'cert_pfx' => __DIR__ . '/certificates/certificado.pfx',
-    'cert_password' => 'TU_PASSWORD',
-    
+    'cert_pfx' => __DIR__ . '/16694181-4-new.pfx',
+    'cert_password' => '5605',
+
     // CAF tipo 39
-    'caf_file' => __DIR__ . '/certificates/CAF_39.xml',
-    
+    'caf_file' => __DIR__ . '/FoliosSII7827422539120251191419 (1).xml',
+
     // Datos empresa
-    'rut_emisor' => '76XXXXXX-X',
-    'razon_social' => 'AKIBARA LTDA',
+    'rut_emisor' => '78274225-6',
+    'razon_social' => 'AKIBARA SPA',
     'giro' => 'VENTA AL POR MENOR DE OTROS PRODUCTOS',
-    'direccion' => 'TU DIRECCION 123',
+    'direccion' => 'DIRECCION EMPRESA',
     'comuna' => 'SANTIAGO',
     'ciudad' => 'SANTIAGO',
     'acteco' => 479100,
-    
-    // Resolución (la tuya real)
-    'fch_resol' => '2014-08-22',
-    'nro_resol' => 80,
-    
+
+    // Resolución (según dato.txt)
+    'fch_resol' => '2025-11-16',
+    'nro_resol' => 0,
+
     // Loop
     'max_hours' => 7,
     'retry_delay' => 30,
@@ -122,7 +122,7 @@ class SIIBoletaREST {
         
         $headers = [
             'User-Agent: Mozilla/4.0 (compatible; PROG 1.0; Windows NT)',
-            'Accept: application/json',
+            'Accept: application/xml',
         ];
         
         // Token en Cookie para todas las llamadas excepto semilla
